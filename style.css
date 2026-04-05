@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+:root {
+    --primary: #00ff9d;     /* Neon Green */
+    --accent: #ff00aa;      /* Neon Pink */
+    --dark: #0a0a1f;        /* Deep Dark Background */
+    --card: rgba(26, 26, 58, 0.92);
+    --section-gap: 160px;   /* Main spacing control */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    background: rgba(10, 10, 31, 0.97);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    border-bottom: 1px solid rgba(0, 255, 157, 0.25);
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 2.1em;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--primary);
+}
+
+/* ==================== HERO / MAIN SECTION ==================== */
+.main {
+    min-height: 100vh;
+    background: url('images/background.jpg') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(10,10,31,0.82), rgba(10,10,31,0.88));
+}
+
+.main-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    padding: 0 8%;
+}
+
+.main h2 {
+    font-size: 1.75em;
+    color: #ddd;
+}
+
+.main h1 {
+    font-size: 4.2em;
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 18px 0 25px;
+}
+
+.main h1 span {
+    color: var(--primary);
+}
+
+.main p {
+    font-size: 1.5em;
+    color: #b0b0ff;
+    margin-bottom: 40px;
+}
+
+.main-btn {
+    background: var(--primary);
+    color: #000;
+    padding: 16px 38px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: all 0.4s;
+}
+
+.main-btn:hover {
+    background: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 0 40px var(--primary);
+}
+
+/* ==================== SOCIAL ICONS ==================== */
+.social-icons {
+    display: flex;
+    gap: 22px;
+    margin-top: 50px;
+}
+
+.social-icons a {
+    width: 54px;
+    height: 54px;
+    background: rgba(255,255,255,0.07);
+    color: #fff;
+    font-size: 1.6em;
+    display: flex;
+    text-decoration-line: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 255, 157, 0.35);
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    color: #000;
+    transform: translateY(-10px) scale(1.2);
+    box-shadow: 0 0 35px var(--primary);
+}
+
+/* ==================== ABOUT ME SECTION ==================== */
+.about {
+    padding: var(--section-gap) 8% 100px;
+    background: var(--dark);
+}
+
+.about .title {
+    margin-bottom: 75px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.about-text p {
+    font-size: 1.22em;
+    line-height: 1.95;
+    color: #ccc;
+    margin-bottom: 28px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+    border: 4px solid var(--primary);
+    box-shadow: 0 25px 60px rgba(0, 255, 157, 0.3);
+}
+
+/* ==================== SERVICES SECTION - More Space & Clear Separation ==================== */
+.cards {
+    padding: 170px 8% 160px;   /* Big space for clear separation */
+    background: #05050f;
+    border-top: 1px solid rgba(0, 255, 157, 0.15);
+}
+
+.cards .title {
+    text-align: center;
+    font-size: 2.9em;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 95px;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.card {
+    background: var(--card);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 255, 157, 0.25);
+    width: 355px;
+    padding: 55px 35px;
+    border-radius: 22px;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-22px) scale(1.07);
+    box-shadow: 0 30px 70px rgba(0, 255, 157, 0.35);
+    border-color: var(--primary);
+}
+
+.card .icon {
+    color: var(--primary);
+    font-size: 5.2em;
+    margin-bottom: 28px;
+}
+
+.card h3 {
+    color: var(--primary);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* ==================== GAMES SECTION ==================== */
+.Games {
+    padding: 140px 8% 120px;
+    background: #05050f;
+    border-top: 1px solid rgba(255, 0, 170, 0.15);
+}
+
+.Games .title {
+    margin-bottom: 80px;
+}
+
+.Game-card {
+    background: var(--card);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 330px;
+    transition: all 0.5s;
+}
+
+.Game-card:hover {
+    transform: scale(1.09) translateY(-15px);
+    box-shadow: 0 35px 70px rgba(255, 0, 170, 0.3);
+}
+
+.Game-image img {
+    width: 100%;
+    transition: transform 0.8s ease;
+}
+
+.Game-card:hover .Game-image img {
+    transform: scale(1.22);
+}
+
+.Game-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.Game-category {
+    color: #999;
+    font-size: 0.95em;
+}
+
+.Game-title {
+    font-size: 1.45em;
+    margin: 12px 0 18px;
+    color: white;
+}
+
+.more-details {
+    background: var(--accent);
+    color: white;
+    padding: 10px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.more-details:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.cards.contact {
+    padding: 150px 8% 130px;
+    background: #05050f;
+    border-top: 1px solid rgba(0, 255, 157, 0.15);
+}
+
+.contact .card {
+    width: 390px;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background-color: #05050f;
+    color: #fff;
+    padding: 70px 8% 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 2px solid rgba(0, 255, 157, 0.2);
+}
+
+.footer-title {
+    font-size: 1.35em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: var(--primary);
+}
+
+.footer .social-icons {
+    gap: 18px;
+}
+
+.footer .social-icons a {
+    width: 46px;
+    height: 46px;
+    font-size: 1.4em;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .main h1 { font-size: 3.5em; }
+}
+
+@media (max-width: 768px) {
+    .about-content, .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .navigation a { margin-left: 20px; font-size: 1em; }
+}
